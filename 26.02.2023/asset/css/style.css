@@ -15,8 +15,6 @@
 
 .header {
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
     color: #fff;
     margin-bottom: 150px;
 }
@@ -189,4 +187,27 @@
 
 .link:hover {
     border-bottom: 1px solid #000; 
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    width: 510px;
+}
+
+.features__card {
+    width: 235px;
+    margin-bottom: 2rem;
+}
+
+.rate__img {
+    width: 600px;
+    height: 525px;
+    background-image: url("../img/exampl.jpg");
+}
+
+.description{
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width: 600px;
 }
