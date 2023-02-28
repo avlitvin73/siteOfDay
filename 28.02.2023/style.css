@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    cursore: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+input {
+    height: 1.5rem;
+    width: 30vw;
+    text-indent: 1rem;
+}
+
+textarea {
+    text-indent: 10px;
+}
+
+.apply {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 0 1rem;
+    flex-shrink: 0;
+}
+
+.date {
+    width: 7rem;
+}

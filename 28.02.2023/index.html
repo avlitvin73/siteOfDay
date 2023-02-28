@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Move square</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2 class="title">Send email for the future you</h2>
+    <form class="form" action="https://futureLetterserver.aleksandrlitvin.repl.co" method="POST">
+        <input type="email" placeholder="email@example.com" name="email" id="to" required>
+        <input type="text" placeholder="subject of the letter" name="subject" id="sub" required>
+        <textarea name="text" placeholder="Main content of letter" id="text" cols="30" rows="10" required></textarea>
+        <div class="apply">
+            <button class="btn" type="submit">Send</button>
+            <input class="date" type="date" name="date" id="date" required>
+        </div>
+
+    </form>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
