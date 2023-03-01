@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans:ital@1&family=Archivo+Narrow&family=BioRhyme&family=Cormorant&family=DM+Sans&family=Eczar&family=Fira+Sans&family=IBM+Plex+Sans&family=Inknut+Antiqua&family=Inter&family=Karla&family=Lato&family=Libre+Baskerville&family=Libre+Franklin&family=Lora&family=Manrope&family=Montserrat&family=Playfair+Display&family=Poppins&family=Proza+Libre&family=Roboto&family=Roboto+Slab&family=Source+Sans+Pro&family=Source+Serif+Pro&family=Space+Grotesk&family=Space+Mono&family=Spectral&family=Syne&family=Work+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #ccc;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    cursore: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    text-align: center;
+}
