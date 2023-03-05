@@ -8,12 +8,12 @@ var modal = document.querySelector(".mymodal");
 var list = document.querySelector(".rank-list");
 var isModalOpen = false;
 var name = ''
-var scrollTop
+var scrollTop = 0 
 window.addEventListener("scroll", function () {
   if (!isModalOpen) {
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollTop += 10 + Math.random() * 5
     title.innerText = `Scrolled: ${scrollTop}`;
-    scrollSection.style.height = `${scrollSection.offsetHeight + 10}px`;
+    scrollSection.style.height = `${(scrollSection.offsetHeight + 10) % window.innerHeight }px`;
     if (scrollTop > lastScrollTop) {
       nav.classList.add("hidden");
       document.body.classList.add("scrolled");
