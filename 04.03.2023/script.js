@@ -9,18 +9,29 @@ var list = document.querySelector(".rank-list");
 var isModalOpen = false;
 var name = ''
 var scrollTop = 0 
+var direction = true
 window.addEventListener("scroll", function () {
   if (!isModalOpen) {
-    scrollTop += 10 + Math.random() * 5
-    title.innerText = `Scrolled: ${scrollTop}`;
-    scrollSection.style.height = `${(scrollSection.offsetHeight + 10) % window.innerHeight }px`;
     if (scrollTop > lastScrollTop) {
-      nav.classList.add("hidden");
-      document.body.classList.add("scrolled");
+        nav.classList.add("hidden");
+        document.body.classList.add("scrolled");
+      } else {
+        nav.classList.remove("hidden");
+        document.body.classList.remove("scrolled");
+      }
+
+    scrollTop += Math.ceil(10 + Math.random() * 5)
+    title.innerText = `Scrolled: ${scrollTop}`;
+    if (direction) {
+        scrollSection.style.height = `${(scrollSection.offsetHeight + 10)}px`;
     } else {
-      nav.classList.remove("hidden");
-      document.body.classList.remove("scrolled");
+        scrollSection.style.height = `${(scrollSection.offsetHeight - 10)}px`;
     }
+    if (scrollSection.style.height > window.innerHeight * 2) {
+        direction = !direction
+    }
+    
+    
     lastScrollTop = scrollTop;
   }
 });
@@ -37,7 +48,6 @@ const topTen = (array) => {
     for (const item of array) {
         const li = document.createElement('li')
         const itemName = nameCutter(item.name, 20)
-        console.log(`${itemName} ${item.scroll}`)
         li.innerText = `${item.scroll} ${item.name}`
         list.appendChild(li)
     }
@@ -65,7 +75,6 @@ btnClose.addEventListener("click", () => {
   modal.style.display = "none";
   isModalOpen = false;
 });
-console.log("here");
 
 
 document.addEventListener('mousedown', event => {
